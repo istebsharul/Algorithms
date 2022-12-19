@@ -1,30 +1,43 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    vector<int> v={11, 17, 5, 8, 6, 4, 7, 12, 3};
-    // for(auto x : v){
-    //     cout<<x<<" ";
+// T.C-> nlogn
+// S.C->
+
+    // vector<int> v={11, 17, 5, 8, 6, 4, 7, 12, 3};
+    // vector<int> temp;
+    // temp.push_back(v[0]);
+    // int count=1;
+    // for(int i=1;i<v.size();i++){
+    //     if(v[i]>=temp.back()){
+    //         temp.push_back(v[i]);
+    //         count++;
+    //     }
+    //     else {
+    //         int ind =lower_bound(temp.begin(),temp.end(),v[i]);
+    //         temp[ind]=v[ind];
+    //     }
     // }
-    vector<int> arr;
-    int b=0;
-    vector<int> c;
-    for(int i=0;i<v.size();i++){
-        for(int j=i; j<v.size();j++){
-            if(v[i] <= v[j]-1){
-                b++;
-                // c[]=
-                cout<<v[i]<<" < "<<v[j]<<endl;
-            }
-            else{
-                cout<<v[i]<<" > "<<v[j]<<endl;
-            }
+    // return count;
+
+class Solution {
+public:
+
+    int f(int i, vector<int> &nums, int p_i){
+        if(i==nums.size()) return 0;
+        int l = 0+f(i+1,prev);
+        if(p_i==-1 || nums[i]>nums[p_i]){
+            int l= max(l, 1+f(i+1,prev));
         }
-        cout<<endl;
+        return len;
     }
-    // cout<<b;
-    // for(auto x : arr){
-    //     cout<<x<<" ";
-    // }
-    
+    int lengthOfLIS(vector<int>& nums){
+        
+    }
+};
+
+int main(){
+
+
+
 }

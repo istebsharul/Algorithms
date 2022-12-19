@@ -38,9 +38,14 @@ void quickSort(int arr[], int s, int e){
 }
 
 int main(){
-    int arr[]={3,5,1,8,2,4};
-    int n= sizeof(arr)/sizeof(arr[0]);
-    cout<<n<<endl;
+    // int arr[]={3,5,1,8,2,4};
+    // int n= sizeof(arr)/sizeof(arr[0]);
+    int n, arr[n];
+    cin>>n;
+    for(int i=0;i<n;i++){
+        arr[i]=rand()%100;
+    }
+
     quickSort(arr,0, n-1);
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" "; 
