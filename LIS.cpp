@@ -5,7 +5,7 @@ using namespace std;
 int lengthOfLIS(vector<int>& nums) {
         vector<int> temp;
         temp.push_back(nums[0]);
-        for(int i(0);i<nums.size();i++){
+        for(int i=0;i<nums.size();i++){
             if(nums[i] > temp.back()){
                 temp.push_back(nums[i]);
             }else{

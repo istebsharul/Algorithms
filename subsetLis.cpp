@@ -4,14 +4,14 @@ using namespace std;
 // T.C-> 2^n 
     // S.C-> O(n) 
     // thus this will give TLE, optimise approach would be using memoisation
-    int f(int i, vector<int> &nums, int p_i){
-        if(i==nums.size()) return 0;
-        int l = 0+f(i+1,prev);
-        if(p_i==-1 || nums[i]>nums[p_i]){
-            int l= max(l, 1+f(i+1,prev));
-        }
-        return len;
-    }
+    // int f(int i, vector<int> &nums, int p_i){
+    //     if(i==nums.size()) return 0;
+    //     int l = 0+f(i+1,prev);
+    //     if(p_i==-1 || nums[i]>nums[p_i]){
+    //         int l= max(l, 1+f(i+1,prev));
+    //     }
+    //     return l;
+    // }
     
     // Optimised approach
     // T.C-> O(n x n) 

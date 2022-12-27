@@ -29,7 +29,7 @@ void codePrint(struct Node* root, string str){
         cout<<root->data<<" : "<<str<<endl;
     }
     codePrint(root->left, str + "0");
-    codePrint(root->right, str + "1");
+    codePrint(root->right, str + "1"); 
 }
 
 void huffmanCodes(char data[], int freq[],int size){
